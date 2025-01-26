@@ -5,20 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penix - Healthcare Chatbot</title>
     <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
 </head>
 <body>
-    <div class="container">
-        <h1>Penix - Healthcare Chatbot</h1>
-        <div class="chat-window">
-            <div id="chat-messages">
-                <!-- Chat messages will appear here dynamically -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>PENIX-AI</h1> 
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class="fas fa-search"></i> 
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Health Issues</a></li> 
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <a href="#"><i class="fas fa-user-circle" style="font-size: 24px;"></i></a>
             </div>
         </div>
-        <form id="chat-form">
-            <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
-            <button type="submit">Send</button>
-        </form>
-    </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Welcome to Penix-AI</h2>
+                    <p>Your AI-powered healthcare assistant.</p>
+                    <button class="start-chat">Start Chat</button>
+                </div>
+                <div class="hero-image">
+                    <img src="../static/images/hero-image.jpeg" alt="Healthcare Chatbot">
+                </div>
+            </div>
+
+            <div class="about">
+                <h2>About Penix-AI</h2>
+                <p>Penix-AI is an advanced healthcare chatbot designed to assist you with your health-related queries and tasks. Our goal is to provide you with accurate and timely information to help you manage your health effectively. Whether you need to check symptoms, schedule appointments, or get medication reminders, Penix-AI is here to help you 24/7.</p>
+            </div>
+    
+            <div class="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Symptom checking</li>
+                    <li>Appointment scheduling</li>
+                    <li>Medication reminders</li>
+                    <li>Health information & tips</li>
+                    <li>24/7 availability</li>
+                </ul>
+            </div>
+
+            <div class="chat-section">
+                <h2>Chat with Penix-AI</h2>
+                <div class="chat-window">
+                    <div id="chat-messages">
+                    </div>
+                </div>
+                <form id="chat-form">
+                    <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+                    <button type="submit">Send</button>
+                </form>
+                <button id="start-chat" class="start-chat">Start Chat</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Penix-AI. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="../static/js/script.js"></script>
 </body>

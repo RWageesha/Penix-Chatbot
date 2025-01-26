@@ -16,6 +16,10 @@ chatForm.addEventListener('submit', function(e) {
 
     userInput.value = '';
 });
+document.getElementById('start-chat').addEventListener('click', function() {
+    chatMessages.innerHTML = ''; // Clear previous messages if any
+    chatMessages.style.display = 'block'; // Show the chat section
+});
 
 function addMessage(message, sender) {
     const messageElement = document.createElement('div');
