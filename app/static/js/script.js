@@ -9,13 +9,27 @@ chatForm.addEventListener('submit', function(e) {
     if (userMessage) {
         addMessage(userMessage, 'user');
 
-        setTimeout(() => {
-            addMessage('I am here to help you!', 'bot'); // Placeholder bot response
-        }, 1000);
+        // Send the user's message to the AI model and get the response
+        fetch('https://your-ai-model-endpoint.com/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: userMessage })
+        })
+        .then(response => response.json())
+        .then(data => {
+            addMessage(data.reply, 'bot'); // Use the AI model's response
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            addMessage('Sorry, something went wrong.', 'bot');
+        });
     }
 
     userInput.value = '';
 });
+
 document.getElementById('start-chat').addEventListener('click', function() {
     chatMessages.innerHTML = ''; // Clear previous messages if any
     chatMessages.style.display = 'block'; // Show the chat section
