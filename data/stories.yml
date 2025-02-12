@@ -28,3 +28,17 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: user provides symptom
+  steps:
+  - intent: provide_symptom
+  - action: action_provide_symptom
+  - action: health_issue_form
+  - active_loop: health_issue_form
+  - action: action_ask_follow_up
+  - action: action_provide_mental_health_issue
