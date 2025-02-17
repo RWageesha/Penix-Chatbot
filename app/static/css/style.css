@@ -428,7 +428,7 @@ nav a:hover {
 }
 
 .about {
-    background-image: url('D:/Penix Chat bot/Penix-Chatbot/app/static/images/bot.jpg'), url('D:/Penix Chat bot/Penix-Chatbot/app/static/images/chatbot.jpg');
+    background-image: url('../images/bot.jpg'), url('../images/chatbot.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     animation: slideBackground 30s linear infinite;
@@ -442,7 +442,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 120px;
-    background: url('D:/Penix Chat bot/Penix-Chatbot/app/static/images/bot.jpg') no-repeat center top;
+    background: #f8f9fa;
     background-size: cover;
     opacity: 0.3;
     z-index: 1;
